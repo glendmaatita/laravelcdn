@@ -377,7 +377,7 @@ class AwsS3Provider extends Provider implements ProviderInterface
         $bucket = $this->getBucket();
         $bucket = (!empty($bucket)) ? $bucket.'.' : '';
 
-        return $url['scheme'] . '://' . $bucket . $url['host'] . '/' . $url['path'] . '/' . $path;
+        return $url['scheme'] . '://' . $bucket . $url['host'] . $url['path'] . $path;
     }
 
     /**
